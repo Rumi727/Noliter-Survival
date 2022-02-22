@@ -1,0 +1,4 @@
+name: NoliterSurvival
+version: '${project.version}'
+main: com.teambucket.nolitersurvival.nolitersurvival.Main
+api-version: 1.18
