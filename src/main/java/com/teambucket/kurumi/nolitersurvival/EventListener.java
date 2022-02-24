@@ -1,4 +1,4 @@
-package com.teambucket.nolitersurvival.nolitersurvival;
+package com.teambucket.kurumi.nolitersurvival;
 
 import com.destroystokyo.paper.event.server.PaperServerListPingEvent;
 import net.kyori.adventure.text.Component;
@@ -16,8 +16,6 @@ import org.bukkit.inventory.meta.BookMeta;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
-
-import static org.apache.commons.lang.math.RandomUtils.nextInt;
 
 public class EventListener implements Listener
 {
@@ -67,11 +65,9 @@ public class EventListener implements Listener
         e.deathMessage(Component.text(ChatColor.RED + "사람이 죽었다."));
     }
 
+    @SuppressWarnings("deprecation")
     @EventHandler(ignoreCancelled = true)
-    void OnAsyncPlayerChat(AsyncPlayerChatEvent e)
-    {
-        e.setCancelled(true);
-    }
+    void OnAsyncPlayerChat(AsyncPlayerChatEvent e) { e.setCancelled(true); }
 
     @EventHandler
     void OnPaperServerListPing(PaperServerListPingEvent e)

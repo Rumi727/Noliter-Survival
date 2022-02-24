@@ -1,4 +1,4 @@
-package com.teambucket.nolitersurvival.nolitersurvival;
+package com.teambucket.kurumi.nolitersurvival;
 
 import org.bukkit.*;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -15,15 +15,12 @@ public final class Main extends JavaPlugin
     public void onEnable()
     {
         server = getServer();
-        debug = server.getLogger();
+        debug = getLogger();
 
 
         List<World> worlds = Bukkit.getWorlds();
-        int length = worlds.size();
-
-        for (int i = 0; i < length; i++)
+        for (World world : worlds)
         {
-            World world = worlds.get(i);
             world.setGameRule(GameRule.ANNOUNCE_ADVANCEMENTS, false);
             world.setGameRule(GameRule.SHOW_DEATH_MESSAGES, true);
             world.setGameRule(GameRule.SEND_COMMAND_FEEDBACK, false);

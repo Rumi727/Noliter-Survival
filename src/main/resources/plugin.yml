@@ -1,4 +1,4 @@
-name: NoliterSurvival
+name: Noliter Survival
 version: '${project.version}'
-main: com.teambucket.nolitersurvival.nolitersurvival.Main
+main: com.teambucket.kurumi.nolitersurvival.Main
 api-version: 1.18
