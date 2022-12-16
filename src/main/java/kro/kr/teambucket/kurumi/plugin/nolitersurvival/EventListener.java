@@ -1,4 +1,4 @@
-package com.teambucket.kurumi.nolitersurvival;
+package kro.kr.teambucket.kurumi.plugin.nolitersurvival;
 
 import com.destroystokyo.paper.event.server.PaperServerListPingEvent;
 import net.kyori.adventure.text.Component;
