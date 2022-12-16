@@ -1,4 +1,4 @@
-package kro.kr.teambucket.kurumi.plugin.nolitersurvival;
+package kr.kro.teambucket.kurumi.plugin.nolitersurvival;
 
 import org.bukkit.*;
 import org.bukkit.plugin.java.JavaPlugin;
