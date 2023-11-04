@@ -2,6 +2,7 @@ package kr.kro.teambucket.kurumi.plugin.nolitersurvival;
 
 import com.destroystokyo.paper.event.server.PaperServerListPingEvent;
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -62,7 +63,7 @@ public class EventListener implements Listener
     @EventHandler(ignoreCancelled = true)
     void OnPlayerDeath(PlayerDeathEvent e)
     {
-        e.deathMessage(Component.text(ChatColor.RED + "사람이 죽었다."));
+        e.deathMessage(Component.text("사람이 죽었다.").color(TextColor.color(255, 85, 85)));
     }
 
     @SuppressWarnings("deprecation")
@@ -76,7 +77,7 @@ public class EventListener implements Listener
 
         e.setNumPlayers(c.get(Calendar.YEAR) * 10000 + (c.get(Calendar.MONTH) + 1) * 100 + c.get(Calendar.DAY_OF_MONTH));
         e.setMaxPlayers(c.get(Calendar.HOUR) * 10000 + c.get(Calendar.MINUTE) * 100 + c.get(Calendar.SECOND));
-        e.motd(Component.text(ChatColor.WHITE + "" + ChatColor.BOLD + "AIMLESS SERVER 2020"));
+        e.motd(Component.text("AIMLESS SERVER " + c.get(Calendar.YEAR)).color(TextColor.color(255, 255, 255)));
         e.getPlayerSample().clear();
     }
 
@@ -114,7 +115,6 @@ public class EventListener implements Listener
             int pages = meta.getPageCount();
             for (int i = 1; i <= pages; i++)
             {
-                Debug.Log(i + "/" + pages);
                 meta.page(i, Component.text(""));
             }
         }
