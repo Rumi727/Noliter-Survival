@@ -1,4 +1,4 @@
 name: Noliter Survival
 version: '${project.version}'
-main: kr.kro.teambucket.kurumi.plugin.nolitersurvival.Main
-api-version: 1.18
+main: kr.kro.teamdodoco.rumi.plugin.nolitersurvival.Main
+api-version: 1.20
